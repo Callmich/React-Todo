@@ -1,6 +1,8 @@
 import React from 'react';
+
 import ToDoList from './components/TodoList';
-import ToDoForm from './components/TodoForm'
+import ToDoForm from './components/TodoForm';
+import "./components/Todo.css"
 
 const toDo = [
   {
@@ -36,19 +38,19 @@ class App extends React.Component {
         }
       })
     })
-    console.log("after click",toDo)
+    console.log("after click",this.state.toDo)
   }
 
   addTask = taskName => {
     const newTask = {
       task: taskName,
       id: new Date(),
-      completed: false
+      comleted: false
     };
     this.setState({
       toDo: [...this.state.toDo, newTask]
     });
-    console.log(toDo)
+    console.log(this.state.toDo)
   }
   
 
