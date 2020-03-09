@@ -13,7 +13,7 @@ import Todo from './Todo';
 
 const ToDoList = props => {
     return (
-        <div>
+        <div >
             {props.toDo.map(item => (
                 <Todo 
                     key={item.id}

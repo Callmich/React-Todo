@@ -27,7 +27,7 @@ class ToDoForm extends React.Component{
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} >
                 <Input
                     type="text"
                     name="item"
