@@ -19,3 +19,8 @@
     align-items: center;
     align-content: center;
 }
+
+.button{
+    border: solid black 1px;
+    background: red;
+}

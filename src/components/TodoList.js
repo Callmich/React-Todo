@@ -2,16 +2,26 @@
 // feel free to change this component.js into TodoList.js
 
 import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+import { makeStyles } from '@material-ui/core/styles';
+
+
 
 
 import React from 'react';
 
 import Todo from './Todo';
 
+
+const useStyles = makeStyles({
+    button: {
+        border: "solid",
+    }
+
+})
+
+
 const ToDoList = props => {
+    const classes = useStyles();
     return (
         <div >
             {props.toDo.map(item => (
@@ -21,7 +31,7 @@ const ToDoList = props => {
                     toggleToDo={props.toggleToDo}
                 />
             ))}
-            <Button onClick={props.clearToDo}>
+            <Button className={classes.button} onClick={props.clearToDo}>
                 Clear Finished Tasks
             </Button>
         </div>
