@@ -52,6 +52,18 @@ class App extends React.Component {
     });
     console.log(this.state.toDo)
   }
+
+  clearToDo = () =>{
+    this.setState({
+      toDo: this.state.toDo.filter(item => {
+        if (item.completed === true){
+        return item.completed === false
+      } else {
+        return item
+      }
+      })
+    })
+  }
   
 
 
@@ -65,6 +77,7 @@ class App extends React.Component {
         <ToDoList 
           toDo={this.state.toDo}
           toggleToDo={this.toggleToDo}
+          clearToDo={this.clearToDo}
         />
       </div>
     );
