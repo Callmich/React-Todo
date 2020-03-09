@@ -1,6 +1,11 @@
 // your components will all go in this `component` directory.
 // feel free to change this component.js into TodoList.js
 
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+
 
 import React from 'react';
 
@@ -16,9 +21,9 @@ const ToDoList = props => {
                     toggleToDo={props.toggleToDo}
                 />
             ))}
-            <button onClick={props.clearToDo}>
+            <Button onClick={props.clearToDo}>
                 Clear Finished Tasks
-            </button>
+            </Button>
         </div>
     )
 }

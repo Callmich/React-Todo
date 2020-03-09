@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 class ToDoForm extends React.Component{
 
@@ -26,13 +28,13 @@ class ToDoForm extends React.Component{
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input
+                <Input
                     type="text"
                     name="item"
                     value={this.state.item}
                     onChange={this.handleChanges}
                 />
-                <button>Add</button>
+                <Button type="submit">Add</Button>
             </form>
         )
     }
