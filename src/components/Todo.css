@@ -1,0 +1,8 @@
+.item{
+    color: red
+}
+
+.item.completed{
+    text-decoration: line-through;
+    color: blue
+}

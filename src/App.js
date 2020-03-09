@@ -36,6 +36,7 @@ class App extends React.Component {
         }
       })
     })
+    console.log("after click",toDo)
   }
 
   addTask = taskName => {
@@ -47,6 +48,7 @@ class App extends React.Component {
     this.setState({
       toDo: [...this.state.toDo, newTask]
     });
+    console.log(toDo)
   }
   
 
